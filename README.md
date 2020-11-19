@@ -14,7 +14,7 @@ This has been tested with ESP8266 board `Tinchen` made by [@ubahnverleih](https:
 2. edit `config.py` to your needs
     * set `AP_NAME`/`AP_PASS` to the SSID and password of your hotspot
     * if your hotspot is slow to connect, increase the `WIFI_CONNECT_TIMEOUT`
-3. copy `main.py` and `config.py` to your ESP for example with [rshell](https://github.com/dhylands/rshell)
+3. copy `main.py` and `config.py` to your ESP, for example with [rshell](https://github.com/dhylands/rshell)
 
 ### on the road
 
