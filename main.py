@@ -160,7 +160,7 @@ while True:
     path = get.split(" ")[1]  # only path
     filename = path.split("/")[-1]  # only last element
     if filename == "":
-        filename = "scan-{}".format(utime.time())
+        filename = "scan-{}".format(now())
     filename += ".csv"
 
     conn.send("HTTP/1.1 200 OK\n")
