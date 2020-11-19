@@ -28,7 +28,7 @@ This has been tested with ESP8266 board `Tinchen` made by [@ubahnverleih](https:
         * query your ARP table (Google: `show arp table $yourOperatingSystem`)
         * scan the network with nmap: `nmap -sP ip.of.your.notebook/24`
 5. open `http://ip.of.your.esp/SomeNameForYourScan` in a browser/with curl/etc. - instructions how to stop are shown
-6. the ESP will wake up every 3 seconds, scan for wifis and save them in a file - Caution: this will require a lot of power!
+6. the ESP will wake up every 3 seconds, scan for wifis and save them in a file - Caution: this requires a lot of power!
 
 ### back home
 
