@@ -162,6 +162,14 @@ while True:
     get = request.split("\r\n")[0]  # only GET line
     path = get.split(" ")[1]  # only path
     filename = path.split("/")[-1]  # only last element
+
+    if filename == "favicon.ico":
+        conn.send("HTTP/1.1 404 Not Found\n")
+        conn.send("Connection: close\n\n")
+        conn.close()
+        utime.sleep_ms(100)
+        continue
+
     if filename == "":
         filename = "scan-{}".format(now())
     filename += ".csv"
