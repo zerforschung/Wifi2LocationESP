@@ -135,7 +135,10 @@ syslog("Wifi", "Starting Wifi...")
 wlan = network.WLAN(network.STA_IF)
 wlan.active(True)
 wlan.disconnect()
-nets = wlan.scan()
+try:
+    nets = wlan.scan()
+except Exception:
+    nets = []
 
 connected = connectWLAN(config.AP_NAME, config.AP_PASS)
 if not connected:
@@ -191,7 +194,11 @@ while True:
     csv = open(filename, "a")
     while True:
         led.off()  # for some reason off and on are flipped on board "Tinchen"
-        nets = removeIgnoredSSIDs(wlan.scan())
+        try:
+            nets = wlan.scan()
+        except Exception:
+            nets = []
+        nets = removeIgnoredSSIDs(nets)
         writeWifisList(csv, nets)
         gc.collect()
 
